@@ -1,1 +1,3 @@
-
+<audio autoplay loop>
+   <source src="assets/audio/ambient.mp3" type="audio/mpeg">
+ </audio>
