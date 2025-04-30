@@ -7,6 +7,31 @@
   <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap" rel="stylesheet">
   <script src="https://cdn.jsdelivr.net/npm/tsparticles@2.9.3/tsparticles.bundle.min.js"></script>
   <style>
+    #left-panel, #right-panel {
+  position: fixed;
+  top: 40%;
+  transform: translateY(-50%);
+  z-index: 5;
+}
+
+#left-panel {
+  left: 20px;
+}
+
+#right-panel {
+  right: 20px;
+}
+
+#left-panel img, #right-panel img {
+  width: 60px;
+  height: auto;
+  filter: drop-shadow(0 0 6px #aad9ff);
+  transition: transform 0.3s ease;
+}
+
+#left-panel img:hover, #right-panel img:hover {
+  transform: scale(1.1);
+}
     * {
       margin: 0;
       padding: 0;
@@ -30,6 +55,17 @@
       width: 100%;
       height: 100%;
       z-index: 0;
+      <div id="left-panel">
+  <a href="#" data-page="echosummit.html" title="Echosummits">
+    <img src="assets/icons/echosummit-icon.png" alt="Echosummits" />
+  </a>
+</div>
+
+<div id="right-panel">
+  <a href="#" data-page="riftpoints-directory.html" title="Riftpoints">
+    <img src="assets/icons/riftpoint-icon.png" alt="Riftpoints" />
+  </a>
+</div>
     }
     main {
       position: relative;
