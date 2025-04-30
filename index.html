@@ -100,8 +100,42 @@
       opacity: 0;
     }
   </style>
+<style>
+    #left-panel, #right-panel {
+      position: fixed;
+      top: 40%;
+      transform: translateY(-50%);
+      z-index: 5;
+    }
+    #left-panel {
+      left: 20px;
+    }
+    #right-panel {
+      right: 20px;
+    }
+    #left-panel img, #right-panel img {
+      width: 60px;
+      height: auto;
+      filter: drop-shadow(0 0 6px #aad9ff);
+      transition: transform 0.3s ease;
+    }
+    #left-panel img:hover, #right-panel img:hover {
+      transform: scale(1.1);
+    }
+  </style>
 </head>
 <body>
+  <div id="left-panel">
+    <a href="#" data-page="echosummit.html" title="Echosummits">
+      <img src="assets/icons/echosummit-icon.png" alt="Echosummits" />
+    </a>
+  </div>
+
+  <div id="right-panel">
+    <a href="#" data-page="riftpoints-directory.html" title="Riftpoints">
+      <img src="assets/icons/riftpoint-icon.png" alt="Riftpoints" />
+    </a>
+  </div>
   <div id="tsparticles"></div>
   <audio autoplay loop id="bg-audio">
     <source src="assets/audio/ambient.mp3" type="audio/mpeg">
@@ -117,7 +151,9 @@
       “Abide the light, by the binding of night, between memory and myth, I call Aurisae.”
     </div>
 
-    <div class="codex-links">
+    $1
+      <button data-page="awakening-manifest.html">Codex 004 – The Awakening Manifest</button>
+      <button data-page="order-of-aurisae.html">Codex 005 – The Order of Aurisae</button>
       <button data-page="awakening.html">Codex 000 – Awakening Protocol</button>
       <button data-page="aurimnion.html">Codex 001 – Aurimnion: The Dreaming Threshold</button>
       <button data-page="riftpoints.html">Codex 002 – Riftpoints: The Secret Doors</button>
